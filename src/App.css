@@ -1,38 +1,161 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Fira Sans", sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::-webkit-scrollbar {
+  display: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.TopCover {
+  height: 8vh;
+  width: 100vw;
+  padding-top: 5px;
+  border-bottom: 1px solid rgb(216, 216, 216);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.TopCover .DataValue {
+  height: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-bottom: 3px solid rgb(0, 189, 199);
+  width: fit-content;
+  color: rgb(0, 189, 199);
+  font-weight: 800;
+  font-size: 17px;
+  margin-left: 25px;
+  padding: 0px 20px;
+}
+.TopCover .DataValue span {
+  background: rgba(0, 189, 199, 0.211);
+  border-radius: 5px;
+  margin-left: 10px;
+  padding: 3px;
+}
+.FunctionalCover {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+.FunctionalFilterButtons {
+  width: 25%;
+  display: flex;
+}
+.FunctionButton {
+  width: 50%;
+  margin-left: 10px;
+  padding: 10px 20px;
+  border: none;
   color: white;
+  font-weight: 500;
+  background: rgb(0, 189, 199);
+  cursor: pointer;
+  outline: none;
+  
 }
-
-.App-link {
-  color: #61dafb;
+.FilterStatus option{
+  background: rgb(255, 255, 255);
+  color: rgb(0, 189, 199);
+  padding: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Sortdate {
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+}
+.FilterStatus {
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.SearchFunctionCover {
+  width: 75%;
+  display: flex;
+  justify-content: end;
+}
+.SearchTextBoxCover {
+  width: 40%;
+  border: 2px solid rgb(0, 189, 199);
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+}
+.SearchTextBoxCover span {
+  width: 10%;
+  color: rgb(0, 189, 199);
+}
+.SearchTextBox {
+  width: 90%;
+  border: none;
+  outline: none;
+}
+.SearchButton {
+  padding: 10px 20px;
+  color: white;
+  background: rgb(0, 189, 199);
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+}
+.TableDataCover{
+  width: 100vw;
+  height: 82vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+}
+.Maintable{
+  width: 95%;
+  text-align: center;
+  border-radius: 15px;
+  overflow: hidden;
+  
+}
+.Maintable thead{
+  background-color: rgba(0, 189, 199, 0.156);
+}
+.Maintable th{
+  height: 50px;
+  cursor: pointer;
+}
+.Maintable td{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(0, 189, 199, 0.156);
+  overflow: hidden;
+}
+.MainTableOrder{
+  font-weight: 700;
+}
+.CompletedStatus{
+  background: rgba(48, 193, 0, 0.272);
+  color: rgb(0, 174, 41);
+  padding: 10px;
+  margin: 1px;
+  border-radius: 20px;
+}
+.DeliveredStatus{
+  background: rgba(0, 113, 193, 0.272);
+  color: rgb(0, 122, 174);
+  padding: 10px;
+  margin: 1px;
+  border-radius: 20px;
+}
+.PreparedStatus{
+  background: rgba(193, 171, 0, 0.272);
+  color: rgb(174, 154, 0);
+  padding: 10px;
+  margin: 1px;
+  border-radius: 20px;
+}
+.PreponeStatus{
+  background: rgba(193, 0, 0, 0.272);
+  color: rgb(174, 0, 0);
+  padding: 10px;
+  margin: 1px;
+  border-radius: 20px;
 }
