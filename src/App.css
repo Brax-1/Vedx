@@ -50,9 +50,8 @@
   background: rgb(0, 189, 199);
   cursor: pointer;
   outline: none;
-  
 }
-.FilterStatus option{
+.FilterStatus option {
   background: rgb(255, 255, 255);
   color: rgb(0, 189, 199);
   padding: 10px;
@@ -100,7 +99,7 @@
   border-bottom-right-radius: 50px;
   border-top-right-radius: 50px;
 }
-.TableDataCover{
+.TableDataCover {
   width: 100vw;
   height: 82vh;
   display: flex;
@@ -108,54 +107,71 @@
   flex-direction: column;
   padding-top: 10px;
 }
-.Maintable{
+.Maintable {
   width: 95%;
   text-align: center;
   border-radius: 15px;
   overflow: hidden;
-  
 }
-.Maintable thead{
+.Maintable thead {
   background-color: rgba(0, 189, 199, 0.156);
 }
-.Maintable th{
+.Maintable th {
   height: 50px;
   cursor: pointer;
 }
-.Maintable td{
+.Maintable td {
   padding-top: 15px;
   padding-bottom: 15px;
   border-bottom: 2px solid rgba(0, 189, 199, 0.156);
   overflow: hidden;
 }
-.MainTableOrder{
+.MainTableOrder {
   font-weight: 700;
 }
-.CompletedStatus{
+.CompletedStatus {
   background: rgba(48, 193, 0, 0.272);
   color: rgb(0, 174, 41);
   padding: 10px;
   margin: 1px;
   border-radius: 20px;
 }
-.DeliveredStatus{
+.DeliveredStatus {
   background: rgba(0, 113, 193, 0.272);
   color: rgb(0, 122, 174);
   padding: 10px;
   margin: 1px;
   border-radius: 20px;
 }
-.PreparedStatus{
+.PreparedStatus {
   background: rgba(193, 171, 0, 0.272);
   color: rgb(174, 154, 0);
   padding: 10px;
   margin: 1px;
   border-radius: 20px;
 }
-.PreponeStatus{
+.PreponeStatus {
   background: rgba(193, 0, 0, 0.272);
   color: rgb(174, 0, 0);
   padding: 10px;
   margin: 1px;
   border-radius: 20px;
+}
+@media only screen and (max-width: 1300px) {
+
+  .TableDataCover {
+    font-size: 12px;
+  }
+  .FunctionalFilterButtons {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 950px) {
+
+  .TableDataCover {
+    font-size: 8px;
+  }
+  .FunctionalFilterButtons {
+    width: 50%;
+  }
 }
