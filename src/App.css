@@ -98,6 +98,9 @@
   border-bottom-right-radius: 50px;
   border-top-right-radius: 50px;
 }
+.SearchButton:hover{
+  background: rgb(0, 101, 106);
+}
 .TableDataCover {
   width: 100vw;
   height: 82vh;
