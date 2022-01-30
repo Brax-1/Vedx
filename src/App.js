@@ -90,12 +90,12 @@ export default class App extends Component {
       ref.setState({ article: filteredData })
       ref.setState({ Heading: "Filtered By Status Prepone" });
     }
-    else {
-      const size = status.length;
-      const filteredData = ref.state.mainarticle.filter((data) => {return data.customer.substr(0,size).toUpperCase() === status.toUpperCase() });
-      ref.setState({ article: filteredData })
-      ref.setState({ Heading: "Filtered By Search" });
-    }
+  }
+  SearchByCustomer(ref,Cusname) {
+    const size = Cusname.length;
+    const filteredData = ref.state.article.filter((data) => { return data.customer.substr(0, size).toUpperCase() === Cusname.toUpperCase() });
+    ref.setState({ article: filteredData })
+    ref.setState({ Heading: "Filtered By Search" });
   }
 
   render() {
@@ -103,7 +103,7 @@ export default class App extends Component {
     return (
       <>
         <TopBar name={this.state.Heading} value={this.state.article.length} />
-        <AllFunctionals FilterData={this.FilterData} Refthis={this} />
+        <AllFunctionals FilterData={this.FilterData} Refthis={this} SearchByCustomer={this.SearchByCustomer}/>
         <DataTable data={this.state.article} SortingData={this.SortingData} outthis={this} />
       </>
     )

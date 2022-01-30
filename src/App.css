@@ -116,6 +116,10 @@
 .Maintable thead {
   background-color: rgba(0, 189, 199, 0.156);
 }
+.Maintable tfoot {
+  background-color: rgb(0, 109, 115);
+  height: 20px;
+}
 .Maintable th {
   height: 50px;
   cursor: pointer;

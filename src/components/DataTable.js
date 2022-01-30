@@ -37,6 +37,9 @@ export default class DataTable extends Component {
                                         )
                                     })}
                                 </tbody>
+                                <tfoot>
+                                    
+                                </tfoot>
                             </table>
                         </div>
                     </>

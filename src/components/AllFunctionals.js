@@ -2,16 +2,18 @@ import React, { Component } from 'react';
 
 export default class AllFunctionals extends Component {
     render() {
-        let {FilterData,Refthis} = this.props;
-        function SearchByName() {
+        let { FilterData, Refthis, SearchByCustomer } = this.props;
+        async function SearchByName() {
             const name = document.querySelector('.SearchTextBox').value;
-            FilterData(Refthis,name)
+            const curfilter = document.querySelector('.FilterStatus').value;
+            await FilterData(Refthis, curfilter);
+            await SearchByCustomer(Refthis, name);
         }
         return (
             <>
                 <div className='FunctionalCover'>
                     <div className='FunctionalFilterButtons'>
-                        <select className='FunctionButton FilterStatus' onChange={(e)=>FilterData(Refthis,e.target.value)} >
+                        <select className='FunctionButton FilterStatus' onChange={(e) => FilterData(Refthis, e.target.value)} >
                             <option value="All" >Filter By Status </option>
                             <option value="Completed" >Completed</option>
                             <option value="Delivered" >Delivered</option>
@@ -24,7 +26,7 @@ export default class AllFunctionals extends Component {
                             <span><i class="fas fa-search"></i></span>
                             <input type='text' placeholder='Type here to search ...' className='SearchTextBox' />
                         </div>
-                        <button className='SearchButton' onClick={()=>SearchByName()}>Search</button>
+                        <button className='SearchButton' onClick={() => SearchByName()}>Search</button>
                     </div>
                 </div>
             </>
