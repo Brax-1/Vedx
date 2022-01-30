@@ -92,7 +92,7 @@ export default class App extends Component {
     }
     else {
       const size = status.length;
-      const filteredData = ref.state.mainarticle.filter((data) => { console.log(status,data.customer.substr(0,size)); return data.customer.substr(0,size) === status });
+      const filteredData = ref.state.mainarticle.filter((data) => {return data.customer.substr(0,size).toUpperCase() === status.toUpperCase() });
       ref.setState({ article: filteredData })
       ref.setState({ Heading: "Filtered By Search" });
     }
