@@ -68,26 +68,32 @@ export default class App extends Component {
     console.log(status)
       if (status==="All") {
           ref.setState({article:ref.state.mainarticle});
+          ref.setState({Heading:"All Orders"});
       }
       else if (status==="Completed") {
           const filteredData = ref.state.mainarticle.filter((data)=>{ return data.status===status });
           ref.setState({article:filteredData})
+          ref.setState({Heading:"Filtered By Status Completed"});
       }
       else if (status==="Delivered") {
           const filteredData = ref.state.mainarticle.filter((data)=>{ return data.status===status });
           ref.setState({article:filteredData})
+          ref.setState({Heading:"Filtered By Status Delivered"});
       }
       else if (status==="Prepared") {
           const filteredData = ref.state.mainarticle.filter((data)=>{ return data.status===status });
           ref.setState({article:filteredData})
+          ref.setState({Heading:"Filtered By Status Prepared"});
       }
       else if (status==="Prepone") {
           const filteredData = ref.state.mainarticle.filter((data)=>{ return data.status===status });
           ref.setState({article:filteredData})
+          ref.setState({Heading:"Filtered By Status Prepone"});
       }
       else{
           const filteredData = ref.state.mainarticle.filter((data)=>{ return data.customer===status });
           ref.setState({article:filteredData})
+          ref.setState({Heading:"Filtered By Search"});
       }
   }
 
